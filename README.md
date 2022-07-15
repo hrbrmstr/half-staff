@@ -2,9 +2,11 @@
 🇺🇸 United States Flag Half-Staff Tracker
 
 - `data/latest.[csv|json]` has latest data file
-- GH pages `index.rss` has current year RSS feed in descending date order
+- GH pages `index.rss` (<https://hrbrmstr.github.io/half-staff/index.rss>) has current year RSS feed in descending date order
 
 Will eventually have regularly updated data.
+
+Because current source site is so irregular with content formatting, this needs to be run manually. Will eventually just scrape from or sub to all U.S. state flag feeds.
 
 WIP URL Catalog of State Flag URLs
 
