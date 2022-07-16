@@ -96,7 +96,8 @@ if (length(new_links)) {
     
     file.copy(
       from = here::here("data", sprintf("%s-collection.csv", Sys.Date())),
-      to = here::here("data", "latest.csv")
+      to = here::here("data", "latest.csv"),
+      overwrite = TRUE
     )
     
     # ——> Write out new records (JSON) --------
@@ -104,7 +105,8 @@ if (length(new_links)) {
     
     file.copy(
       from = here::here("data", sprintf("%s-collection.json", Sys.Date())),
-      to = here::here("data", "latest.json")
+      to = here::here("data", "latest.json"),
+      overwrite = TRUE
     )
     
     # ——> Write out links --------
@@ -130,7 +132,7 @@ read_csv(
   filter(
     lubridate::year(date) == lubridate::year(Sys.Date())
   ) |> 
-  arrange(desc(date), desc(state)) -> xdf
+  arrange(desc(date)) -> xdf
 
 xdf$digest <- sapply(xdf$reason, digest::digest, algo = "sha256")
 
