@@ -191,10 +191,9 @@ cat(
 )
 
 cat(
-  '</channel>
-</rss> 
-',
+  "</channel>
+</rss>
+",
   file = here::here("docs", "index.rss"),
   append = TRUE
 )
-
