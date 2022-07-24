@@ -197,3 +197,7 @@ cat(
   file = here::here("docs", "index.rss"),
   append = TRUE
 )
+
+system("git add -A")
+system("git commit -m '2022-07-24 update'")
+system("git push")
