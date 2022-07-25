@@ -25,7 +25,7 @@ setdiff(
 
 new_links
 
-if (length(new_links)) {
+if (length(new_links) > 0) {
   
   new_links |> 
     map(~{
