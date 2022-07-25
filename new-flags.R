@@ -67,7 +67,7 @@ if (length(new_links) > 0) {
   
   xdf 
   
-  PROCESS_NEW <- FALSE # makes sure automation doesn't kick in
+  PROCESS_NEW <- TRUE # makes sure automation doesn't kick in
   
   if (PROCESS_NEW) {
     
