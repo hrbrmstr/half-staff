@@ -199,5 +199,5 @@ cat(
 )
 
 system("git add -A")
-system("git commit -m '2022-07-24 update'")
+system(sprintf("git commit -m '%s update'", Sys.Date()))
 system("git push")
