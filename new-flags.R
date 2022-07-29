@@ -45,6 +45,16 @@ if (length(new_links) > 0) {
       
     }) -> titles
   
+  case_when(
+    new_links == "https://flagsexpress.com/flags-half-staff/idaho/june-26-2022/fallen-fighter-pilots-Tommy-Hayes-and-Jared-Bird/" ~
+      "https://flagsexpress.com/flags-half-staff/idaho/july-26-2022/fallen-fighter-pilots-Tommy-Hayes-and-Jared-Bird/",
+    new_links == "https://flagsexpress.com/flags-half-staff/july-26-2022-halfstaff-alert-wisconsin/" ~
+      "https://flagsexpress.com/flags-half-staff/wisconsin/july-26-2022/halfstaff-alert/",
+    new_links == "https://flagsexpress.com/flags-half-staff/new-jersey/july-6-2022/Ronald-Dancer/" ~
+      "https://flagsexpress.com/flags-half-staff/new-jersey/july-26-2022/Ronald-Dancer/",
+    TRUE ~ new_links
+  ) -> new_links
+  
   new_links |> 
     map_df(~{
       
@@ -65,7 +75,7 @@ if (length(new_links) > 0) {
   
   # ——> Manual inspection of new record(s) --------
   
-  xdf 
+  xdf
   
   PROCESS_NEW <- TRUE # makes sure automation doesn't kick in
   
