@@ -52,6 +52,8 @@ if (length(new_links) > 0) {
       "https://flagsexpress.com/flags-half-staff/wisconsin/july-26-2022/halfstaff-alert/",
     new_links == "https://flagsexpress.com/flags-half-staff/new-jersey/july-6-2022/Ronald-Dancer/" ~
       "https://flagsexpress.com/flags-half-staff/new-jersey/july-26-2022/Ronald-Dancer/",
+    new_links == "https://flagsexpress.com/flags-half-staff/new-york/july-31-August-2-2022/Anthony-Mazurkiewicz/" ~
+      "https://flagsexpress.com/flags-half-staff/new-york/july-31-2022/Anthony-Mazurkiewicz/",
     TRUE ~ new_links
   ) -> new_links
   
